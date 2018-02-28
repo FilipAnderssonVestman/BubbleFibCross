@@ -5,9 +5,10 @@
              x:Class="BubbleFibCross.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Välkommen"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button Text="Fibonaccisekvensen" Clicked="Fibonaacci_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

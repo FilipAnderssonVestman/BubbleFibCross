@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BubbleFibCross", "BubbleFibCross\BubbleFibCross\BubbleFibCross.shproj", "{2075923E-F853-4CF6-9A3A-F2EF862DDB97}"
 EndProject
@@ -15,6 +15,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		BubbleFibCross\BubbleFibCross\BubbleFibCross.projitems*{2075923e-f853-4cf6-9a3a-f2ef862ddb97}*SharedItemsImports = 13
 		BubbleFibCross\BubbleFibCross\BubbleFibCross.projitems*{ae468093-dc22-402d-ac68-987924a287a3}*SharedItemsImports = 4
+		BubbleFibCross\BubbleFibCross\BubbleFibCross.projitems*{bfb55d3e-94b8-430a-824d-eadb89fa9f3b}*SharedItemsImports = 4
 		BubbleFibCross\BubbleFibCross\BubbleFibCross.projitems*{c0d07977-9017-44dd-be40-0b278e2ec952}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
