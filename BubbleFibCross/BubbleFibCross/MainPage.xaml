@@ -5,10 +5,46 @@
              x:Class="BubbleFibCross.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Välkommen"
+            <Label x:Name="ResultLabel" Text="Välkommen"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button Text="Fibonaccisekvensen" Clicked="Fibonaacci_Clicked" />
+            <Picker x:Name="FibPicker" Title="Fibonacci">
+                <Picker.Items>
+                    <x:String>5</x:String>
+                    <x:String>10</x:String>
+                    <x:String>15</x:String>
+                    <x:String>20</x:String>
+                    <x:String>25</x:String>
+                    <x:String>30</x:String>
+                    <x:String>35</x:String>
+                    <x:String>36</x:String>
+                    <x:String>37</x:String>
+                    <x:String>38</x:String>
+                    <x:String>39</x:String>
+                    <x:String>40</x:String>
+                    <x:String>41</x:String>
+                    <x:String>42</x:String>
+                    <x:String>43</x:String>
+                    <x:String>44</x:String>
+                    <x:String>45</x:String>
+                    <x:String>46</x:String>
+                    <x:String>47</x:String>
+                    <x:String>48</x:String>
+                    <x:String>49</x:String>
+                    <x:String>50</x:String>
+                    
+                </Picker.Items>
+            </Picker>
+            <Button Text="Fibonaccisekvensen" Clicked="Fibonacci_Clicked" />
+
+            <Picker x:Name="BubPicker" Title="Bubble Sort">
+                <Picker.Items>
+                    <x:String>Best Case</x:String>
+                    <x:String>Worst Case</x:String>
+                    <x:String>Random</x:String>                    
+                </Picker.Items>
+            </Picker>
+            <Button Text="Bubble Sort" Clicked="Bubble_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

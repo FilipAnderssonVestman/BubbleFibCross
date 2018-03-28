@@ -9,7 +9,7 @@ using Android.App;
 [assembly: AssemblyTitle("BubbleFibCross.Android")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Filip och Mange")]
 [assembly: AssemblyProduct("BubbleFibCross.Android")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
