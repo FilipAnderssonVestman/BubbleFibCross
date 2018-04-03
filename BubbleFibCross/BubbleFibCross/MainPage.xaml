@@ -39,9 +39,21 @@
 
             <Picker x:Name="BubPicker" Title="Bubble Sort">
                 <Picker.Items>
-                    <x:String>Best Case</x:String>
-                    <x:String>Worst Case</x:String>
-                    <x:String>Random</x:String>                    
+                    <x:String>Best Case 10 000</x:String>
+                    <x:String>Best Case 20 000</x:String>
+                    <x:String>Best Case 30 000</x:String>
+                    <x:String>Best Case 40 000</x:String>
+                    <x:String>Best Case 50 000</x:String>
+                    <x:String>Worst Case 10 000</x:String>
+                    <x:String>Worst Case 20 000</x:String>
+                    <x:String>Worst Case 30 000</x:String>
+                    <x:String>Worst Case 40 000</x:String>
+                    <x:String>Worst Case 50 000</x:String>
+                    <x:String>Random 10 000</x:String>
+                    <x:String>Random 20 000</x:String>
+                    <x:String>Random 30 000</x:String>
+                    <x:String>Random 40 000</x:String>
+                    <x:String>Random 50 000</x:String>
                 </Picker.Items>
             </Picker>
             <Button Text="Bubble Sort" Clicked="Bubble_Clicked" />

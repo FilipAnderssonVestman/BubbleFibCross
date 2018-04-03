@@ -30,13 +30,13 @@ namespace BubbleFibCross
 
 		private void Bubble_Clicked(object sender, EventArgs e)
 		{
-            var list = GetRandomList();
+            var list = GetListVeryUgly(BubPicker.Items[BubPicker.SelectedIndex].ToString());  
 
             var before = DateTime.Now;
             BubbleSort(list);
             var totalTime = DateTime.Now - before;
 
-            ResultLabel.Text = totalTime.TotalMilliseconds.ToString() + " millisekunder";
+            ResultLabel.Text = totalTime.TotalMilliseconds.ToString() + " millisekunder";            
 		}
         
 
@@ -48,45 +48,77 @@ namespace BubbleFibCross
             return FibonacciSequence(value - 2) + FibonacciSequence(value - 1);
         }
 
+        private int[] GetListVeryUgly(string value)
+        {
+            switch (value)
+            {
+                case "Best Case 10 000":
+                    return GetOrderedList(10000, false);
+                case "Best Case 20 000":
+                    return GetOrderedList(20000, false);
+                case "Best Case 30 000":
+                    return GetOrderedList(30000, false);
+                case "Best Case 40 000":
+                    return GetOrderedList(40000, false);
+                case "Best Case 50 000":
+                    return GetOrderedList(50000, false);
+                case "Worst Case 10 000":
+                    return GetOrderedList(10000, true);
+                case "Worst Case 20 000":
+                    return GetOrderedList(20000, true);
+                case "Worst Case 30 000":
+                    return GetOrderedList(30000, true);
+                case "Worst Case 40 000":
+                    return GetOrderedList(40000, true);
+                case "Worst Case 50 000":
+                    return GetOrderedList(50000, true);
+                case "Random 10 000":
+                    return GetRandomList(10000);
+                case "Random 20 000":
+                    return GetRandomList(20000);
+                case "Random 30 000":
+                    return GetRandomList(30000);
+                case "Random 40 000":
+                    return GetRandomList(40000);
+                case "Random 50 000":
+                    return GetRandomList(50000);
+                default:
+                    break;
+            }
+
+            return null;
+        }
+
         private void BubbleSort(int[] numbers)
         {
-            int tmp;
             for (int i = 0; i < numbers.Length-1; i++)           
-                for (int j = 0; j < numbers.Length-1; j++) // Kör igenom listan en gång för varje element i den
+                for (int j = 0; j < numbers.Length-1; j++)   // Kör igenom listan en gång för varje element i den
                 {
                     if (numbers[j] > numbers[j + 1])
                     {
-                        tmp = numbers[j];
+                        var tmp = numbers[j];
                         numbers[j] = numbers[j + 1];
                         numbers[j + 1] = tmp;
-
                     }
                 }
-
-           /* var text = "";
-
-            foreach (var num in numbers)
-            {
-                text += $"{num}\n";
-            }
-
-            ResultLabel.Text = text; */
-
-
-           
         }
 
-        private int[] GetRandomList()
+        private int[] GetOrderedList (int amount, bool reversed)
         {
-            // http://utbweb.its.ltu.se/~filves-3/bub/RandomIntegers10000.txt
+            var numbers = Enumerable.Range(1, amount).ToArray();
 
-            var text = new WebClient().DownloadString(new Uri("http://utbweb.its.ltu.se/~filves-3/bub/RandomIntegers10000.txt"));
+            if (reversed)
+                Array.Reverse(numbers);
 
-            return Array.ConvertAll(text.Split(new[] { Environment.NewLine }, StringSplitOptions.None), int.Parse);
-
-            
-            
+            return numbers;            
         }
+
+        private int[] GetRandomList(int amount)
+        {
+            var text = new WebClient().DownloadString(new Uri("http://utbweb.its.ltu.se/~filves-3/bub/RandomIntegers" + amount + ".txt"));
+           
+            return Array.ConvertAll(text.Split(','), int.Parse);
+        }               
            
     }    
 }
